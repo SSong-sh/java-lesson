@@ -43,12 +43,46 @@ public class Homework01 {
 		 byte familyMember  = 5;
 		 System.out.println("저의 가족 수는 " + familyMember + " 명 입니다.");
 		 
-//		 byte   = 14;
-//		 System.out.println("제 아이폰 모델은 " + iphoneModel + " pro 입니다.");
-//		 byte iphoneModel  = 14;
-//		 System.out.println("제 아이폰 모델은 " + iphoneModel + " pro 입니다.");
-//		 byte iphoneModel  = 14;
-//		 System.out.println("제 아이폰 모델은 " + iphoneModel + " pro 입니다.");
+		 byte sisAge = 30;
+		 System.out.println("우리 언니 나이는 " + sisAge + " 살 입니다.");
+		 
+		 byte engLevel  = 5;
+		 System.out.println("영어 스피킹 레벨은 " + engLevel + " 단계 입니다.");
+		 
+		 byte catAge  = 4;
+		 System.out.println("우리 고양이 나이는 " + catAge + " 살 입니다.");
+		 
+		 
+		 //short
+		 short myHeight = 164;
+		 System.out.println("저의 키는" + myHeight + " cm입니다" );
+		 
+		 short homeFloor  = 1507;
+		 System.out.println("저희 집은 " + homeFloor + "호 입니다" );
+		 
+		 short candyCost = 1000;
+		 System.out.println("이 사탕의 가격은" + 1000 + " 원입니다" );
+		 
+		 short songNumber = 5453;
+		 System.out.println("노래방 애창곡 번호는" + songNumber + " 번입니다" );
+//		 
+//		 short myHeight = 164;
+//		 System.out.println("저의 키는" + myHeight + " cm입니다" );
+//		 
+//		 short myHeight = 164;
+//		 System.out.println("저의 키는" + myHeight + " cm입니다" );
+//		 
+//		 short myHeight = 164;
+//		 System.out.println("저의 키는" + myHeight + " cm입니다" );
+//		 
+//		 short myHeight = 164;
+//		 System.out.println("저의 키는" + myHeight + " cm입니다" );
+//		 
+//		 short myHeight = 164;
+//		 System.out.println("저의 키는" + myHeight + " cm입니다" );
+//		 
+//		 short myHeight = 164;
+//		 System.out.println("저의 키는" + myHeight + " cm입니다" );
 		 
 		 
 	}
