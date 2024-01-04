@@ -1,11 +1,12 @@
 package com.test.java;
 
-import java.awt.geom.FlatteningPathIterator;
-
 public class Ex10_Casting {
 	public static void main(String[] args) {
 		
 		/*
+		 + 변수 이름을 바꾸고 싶을 때 단축키 ctrl+1 하나만 고칠꺼냐, 다 고칠꺼냐를 선택할 수 있음
+		 
+		 
 		 
 		 형변환, 자료형변환
 		 - Promotion, Casting
