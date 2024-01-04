@@ -9,20 +9,19 @@ public class Q001 {
 	public static void main(String[] args) throws IOException {
 		
 		//문제1. 만나이 계산
-//		
-//		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//		
-//		System.out.print("태어난 년도: ");
-//		
-//		
-////		String year = reader.read();
-////		
-////		
-////		int age =  2024 - year;
-//		
-//		
-//	
-//		
-//		System.out.print(year);
+		
+
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); 
+		
+		System.out.print("태어난 년도: ");
+		
+		String year = reader.readLine();
+		
+		int codeyear = Integer.parseInt(year);
+		
+		int age =  2024 - codeyear;
+		
+        System.out.printf("나이: %d세",age);
+
 	}
 }
