@@ -11,6 +11,7 @@ public class Q003 {
 		
 		System.out.print("너비(cm): ");
 		String input1 = reader.readLine();
+		//String input1 = reader.readLine();
 		
 		System.out.print("높이(cm): ");
 		String input2 = reader.readLine();
@@ -21,7 +22,7 @@ public class Q003 {
 		int area = width * height;
 		int round = (width*2) + (height*2);
 		
-		System.out.printf("사각형의 넓이는 %dcm^2",area);
+		System.out.printf("사각형의 넓이는 %d㎠",area);
 		System.out.println();
 		System.out.printf("사각형의 둘레는 %dcm",round);
 		
