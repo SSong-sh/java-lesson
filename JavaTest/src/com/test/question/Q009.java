@@ -10,7 +10,7 @@ public class Q009 {
 		
 		result = getName("아무개");
 		System.out.printf("고객: %s\n",result);
-	}
+	}//main
 	
 	public static String getName(String name) {
 		
