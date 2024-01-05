@@ -17,7 +17,7 @@ public class Q007 {
 		
 	
 		System.out.printf("소문자 '%c'의 대문자는 '%c'입니다." , input1, capital);
-	
+		
 		
 	}
 
