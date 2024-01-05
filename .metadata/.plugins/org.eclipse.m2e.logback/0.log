@@ -7,3 +7,6 @@
 2024-01-03 13:45:11,946 [Worker-8: Computing Git status for repository java] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\class\code\java\java-lesson\.git]
 2024-01-03 13:50:27,348 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2024-01-03 13:50:45,166 [Worker-18: Remove Repositories] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\user\git\java-lesson\.git]
+2024-01-04 08:44:36,254 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-01-05 08:49:23,685 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-01-05 16:05:50,325 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
