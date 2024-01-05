@@ -100,5 +100,20 @@ public class Ex18_Method {
 		System.out.println();
 		
 	}
+	//코드 컨벤션
+	//네이밍 규칙 > 변수명, 메서드명, 클래스명 등..
+	
+	
+	//K&R 스타일
+	public static void m1() {
+		
+		
+	}
+	
+	//Allman 스타일
+	public static void m2() {
+		
+		
+	}
 	
 }
