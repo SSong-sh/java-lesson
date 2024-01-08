@@ -9,6 +9,7 @@ public class Q044 {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 		int sum = 0;
+<<<<<<< HEAD
 		int sum2 = 0;
 
 		for (int i = 1;; i++) {
@@ -24,6 +25,31 @@ public class Q044 {
 			}
 
 		}
+=======
+		String cal = "";
+
+
+		for (;;) {
+			System.out.print("숫자 : ");
+			int num = Integer.parseInt(reader.readLine());
+			
+			if(num % 2 ==0 ) {
+				sum += num;
+				cal += " + " + num;
+
+			} else {
+				sum -= num;
+				cal += " - " + num;
+			}
+			
+			if (sum >= 100) {
+				break;
+			}
+
+		}
+		System.out.println(cal + " = " + sum );
+
+>>>>>>> branch 'main' of https://github.com/SSong-sh/java-lesson.git
 
 	}
 

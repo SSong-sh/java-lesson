@@ -11,12 +11,9 @@
     <fullyQualifiedTypeName name="java.lang.Short"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.nio.channels.NonWritableChannelException"/>
-    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="org.jcp.xml.dsig.internal.dom.DOMSubTreeData"/>
     <fullyQualifiedTypeName name="java.lang.invoke.StringConcatFactory"/>
     <fullyQualifiedTypeName name="com.test.java.Ex14_Method"/>
-    <fullyQualifiedTypeName name="java.lang.Readable"/>
-    <fullyQualifiedTypeName name="java.nio.channels.InterruptedByTimeoutException"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
@@ -24,10 +21,22 @@
     <fullyQualifiedTypeName name="javax.swing.plaf.metal.MetalInternalFrameTitlePane"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.sql.SQLClientInfoException"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="javax.naming.spi.DirStateFactory.Result"/>
     <fullyQualifiedTypeName name="javax.imageio.event.IIOReadWarningListener"/>
     <fullyQualifiedTypeName name="java.time.zone.ZoneRulesException"/>
+    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+    <fullyQualifiedTypeName name="java.nio.channels.InterruptedByTimeoutException"/>
+    <fullyQualifiedTypeName name="java.security.KeyStore.TrustedCertificateEntry"/>
+    <fullyQualifiedTypeName name="java.lang.Readable"/>
+    <fullyQualifiedTypeName name="java.lang.Enum.EnumDesc"/>
+    <fullyQualifiedTypeName name="java.nio.file.attribute.UserPrincipalLookupService"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.events.Event"/>
+    <fullyQualifiedTypeName name="java.util.function.BiConsumer"/>
+    <fullyQualifiedTypeName name="java.awt.FocusTraversalPolicy"/>
+    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.ProcessBuilder.Redirect"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
