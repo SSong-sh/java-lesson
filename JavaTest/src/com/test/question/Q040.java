@@ -10,20 +10,32 @@ public class Q040 {
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		
-		int sum = 0;
 		
-		System.out.print("시작 숫자: ");
-		int startNum = Integer.parseInt(reader.readLine());
+		int sum= 0;
+		int sum2=0;
 		
-		System.out.print("종료 숫자: ");
-		int endNum = Integer.parseInt(reader.readLine());
-		
-		for(int i=startNum; i<=endNum; i++) {
-			System.out.print(i + " + ");
-			sum += i;
-		
-		}
-		System.out.println("\b\b= " + sum);
-	}
+		  System.out.print("시작 숫자: ");
+	      int startNum = Integer.parseInt(reader.readLine());
+	      
+	      System.out.print("종료 숫자: ");
+	      int endNum = Integer.parseInt(reader.readLine());
 
-}
+	      for(int i=startNum; i<=endNum; i++) {
+	          
+	          if(i%2==0) {
+	             System.out.print(i + " + ");
+	             sum -= i;
+	             
+	          } else {
+	             System.out.print(i + " - ");
+	             sum2 += i;
+	          
+	          }
+	       
+	       }
+	       System.out.println("\b\b= " + (sum + sum2));
+	    }
+
+		
+		
+	}
