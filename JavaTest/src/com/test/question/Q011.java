@@ -66,7 +66,8 @@ public class Q011 {
     //divide method
     public static String divide(int num1, int num2) {
         String cal = "";
-        double result = (double) num1 / num2;  // 소수점까지 계산 -> 한 자리 까지 어떻게 하는지 모르겟음 
+        double result = (double) num1 / num2;  // 소수점까지 계산 -> 한 자리 까지 어떻게 하는지 모르겟음
+        
         cal = num1 + " / " + num2 + " = " + result;
 
         return cal;
