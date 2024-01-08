@@ -46,6 +46,7 @@ public class Ex22_switch {
 		} else {
 			System.out.println("음수");
 		}
+	}
 		
 		
 //		switch (num) {
