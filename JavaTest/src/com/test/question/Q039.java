@@ -21,6 +21,7 @@ public class Q039 {
 		for(int i=startNum; i<=endNum; i++) {
 			System.out.print(i + " + ");
 			sum += i;
+		
 		}
 		System.out.println("\b\b= " + sum);
 	}
