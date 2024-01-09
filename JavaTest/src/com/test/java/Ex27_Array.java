@@ -53,6 +53,11 @@ public class Ex27_Array {
 		System.out.println(copy[1]);
 		System.out.println(copy[2]);
 		
+		//원본을 수정하면 복사본도 수정된다.
+		//복사본을 수정하면 원본도 수정된다.
+		//> Side effect 발생
+		
+		
 		nums[0] = 100;
 		System.out.println(copy[0]);
 		
