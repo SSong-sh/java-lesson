@@ -29,13 +29,15 @@ public class Q043 {
 			} else if (num != random) {
 				System.out.println("틀렸습니다.");
 				System.out.println();
-			} 
+			} else {
+				System.out.printf("컴퓨터가 생각한 숫자는 %d입니다.\n", random);
+				System.out.println("모든 기회를 실패하셨습니다.");
+				System.out.println();
+				System.out.println("프로그램을 종료합니다.");
+			}
+			
+		} 
+		
 
-		}
-
-		System.out.printf("컴퓨터가 생각한 숫자는 %d입니다.\n", random);
-		System.out.println("모든 기회를 실패하셨습니다.");
-		System.out.println();
-		System.out.println("프로그램을 종료합니다.");
 	}
 }
