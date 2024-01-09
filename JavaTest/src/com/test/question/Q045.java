@@ -23,7 +23,7 @@ public class Q045 {
 			
 			for (int i=1; i<= maxNumber; i++) { 
 				
-				System.out.print(check368(i) + " ");
+				System.out.print(check369(i) + " ");
 				
 			}
 		} else {
@@ -33,7 +33,7 @@ public class Q045 {
 		
 	} //main
 	
-	public static String check368(int i) {
+	public static String check369(int i) {
 		
 		String clap = "";
 		int num = i;
@@ -44,6 +44,7 @@ public class Q045 {
 			}
 			
 			num /= 10;
+		
 		}
 		
 		if(clap.equals("")) {
