@@ -21,12 +21,79 @@ public class Ex27_Array {
 
 		// m7();
 		// m8();
-		m9();
+		//m9();
+		
+		//m10();
+		m11();
 	}// main
+
+	private static void m11() {
+		
+		// 배열 초기화 리스트
+		
+		int[] nums1 = new int[5];
+		
+		nums1[0] = 95;
+		nums1[1] = 88;
+		nums1[2] = 67;
+		nums1[3] = 89;
+		nums1[4] = 64;
+		
+		System.out.println(Arrays.toString(nums1));
+		
+		int[] nums2 = new int[] {95, 88, 67, 89, 64};
+		System.out.println(Arrays.toString(nums2));
+		
+		int[] nums3 = {95, 88, 67, 89, 64};
+		System.out.println(Arrays.toString(nums3));
+		
+		String[] names1 = new String[3];
+		
+		names1[0] = "홍길동";
+		names1[1] = "임꺽정";
+		names1[2] = "도깨비";
+		
+		String[] names2 = {"홍길동" , "임꺽정", "도깨비"};
+		
+		System.out.println(Arrays.toString(names1));
+		System.out.println(Arrays.toString(names2));
+		
+	}
+
+	private static void m10() {
+		//배열 자동 초기화
+		//-배열은 생성 직후 모든 요소(방)가 초기화 된다.
+		
+		//초기회 규칙
+		//1.정수 배열 >0
+		//2. 실수 배열 > 0.0
+		//3. 문자열 > \0(\u0000)
+		//4. 논리배열 > false
+		///5. 참조형 배열 > null
+		
+		int[] list1 = new int[3];
+		System.out.println(Arrays.toString(list1));
+		
+		byte[] list2 = new byte[3];
+		System.out.println(Arrays.toString(list2));
+		
+		double[] list3 = new double[3];
+		System.out.println(Arrays.toString(list3));
+		
+		char[] list4 = new char[3];
+		System.out.println(Arrays.toString(list4));
+		
+		boolean[] list5 = new boolean[3];
+		System.out.println(Arrays.toString(list5));
+		
+		String[] list6 = new String[3];
+		System.out.println(Arrays.toString(list6));
+	}
 
 	private static void m9() {
 
 		// Arrays 클래스
+		// - 유틸리티 클래스
 		// - 배열과 관련된 여러가지 기능을 구현한 클래스
 		// - 배열을 조작하는 편리한 기능을 제공하는 역할
 
@@ -35,7 +102,35 @@ public class Ex27_Array {
 		nums[0] = 10;
 		nums[1] = 20;
 		nums[2] = 30;
+		
+		//배열의 상태를 확인?
+		//- [I > int []
+		//-@
+		//-2ff4acdo > 메모리 주소
+		System.out.println(nums); //쓸모없음
+		
+		printArray(nums);
+		System.out.println(Arrays.toString(nums)); //dump(덤프)
+		
+		//*** C계열의 언어들은 범위를 나타날때
+		//- 시작위치(inclusive) ~ 끝위치(exclusive) => 처음은 포함, 끝위치는 포함안됨
+		
+		int[] copy;
+		
+		//깊은 복사
+		copy = Arrays.copyOfRange(nums, 0, nums.length);
+		
+		nums[0] = 100;
+		System.out.println(Arrays.toString(nums));
+		System.out.println(Arrays.toString(copy));
+	}
 
+	private static void printArray(int[] nums) {
+		
+		for (int i=0; i< nums.length; i++) {
+			System.out.printf("%3d", nums[i]);
+		}
+		System.out.println();
 	}
 
 	private static void m8() {
@@ -132,7 +227,7 @@ public class Ex27_Array {
 
 		nums[0] = 100;
 		System.out.println(copy[0]);
->>>>>>> 2da0bf343cc7add26f427a6556b2c240f2903c9e
+
 
 		copy[1] = 200;
 		System.out.println(nums[1]);
