@@ -9,47 +9,30 @@ public class Q044 {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 		int sum = 0;
-
 		int sum2 = 0;
-
-		for (int i = 1;; i++) {
-			System.out.print("숫자 : ");
-			int num = Integer.parseInt(reader.readLine());
-			if (num % 2 == 0) {
-				sum += num;
-			} else if(num % 2 !=0) {
-				sum2 -= num;
-			} else if(sum >= 100) {
-				System.out.println("\b\b= " + (sum + sum2));
-				break;
-			}
-
-		}
-
 		String cal = "";
-
 
 		for (;;) {
 			System.out.print("숫자 : ");
 			int num = Integer.parseInt(reader.readLine());
 			
-			if(num % 2 ==0 ) {
+			if (num % 2 == 0) {
+				
 				sum += num;
 				cal += " + " + num;
-
+				
 			} else {
+				
 				sum -= num;
 				cal += " - " + num;
+				
 			}
-			
 			if (sum >= 100) {
 				break;
 			}
 
 		}
 		System.out.println(cal + " = " + sum );
-
-
 
 	}
 
