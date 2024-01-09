@@ -9,7 +9,7 @@ public class Q044 {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 		int sum = 0;
-<<<<<<< HEAD
+
 		int sum2 = 0;
 
 		for (int i = 1;; i++) {
@@ -25,7 +25,7 @@ public class Q044 {
 			}
 
 		}
-=======
+
 		String cal = "";
 
 
@@ -49,7 +49,7 @@ public class Q044 {
 		}
 		System.out.println(cal + " = " + sum );
 
->>>>>>> branch 'main' of https://github.com/SSong-sh/java-lesson.git
+
 
 	}
 
