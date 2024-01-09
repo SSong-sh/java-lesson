@@ -1,6 +1,7 @@
 package com.test.java;
 
 
+import java.nio.channels.NonWritableChannelException;
 import java.util.Calendar;
 
 public class Ex27_Array {
@@ -18,9 +19,42 @@ public class Ex27_Array {
 		// m5();
 
 		// m6();
-		m7();
+		//m7();
+		m8();
 
 	}// main
+
+	private static void m8() {
+		//배열 복사
+		//1. 얕은 복사, Shallow Copy
+		//- 주소값 복사
+		//- Side Effect 발생
+		
+		//2. 깊은 복사, Deep copy
+		//- 실제 배열 복사
+		//- Side Effect 발생 안함
+		
+		int nums[] = new int[3];
+		
+		nums[0] = 10;
+		nums[1] = 20;
+		nums[2] = 30;
+		
+		int copy[] = new int[3];
+		
+		for(int i=0; i<nums.length;i++) {
+			
+			//방과 방끼리의 복사 > 요소끼리의 복사
+			//int = int
+			copy[i] = nums[i]; //배열끼리 복사는 copy[] = nums[]
+			
+		}
+		
+		nums[0] = 100;
+		System.out.println(copy[0]);
+		
+		
+	}
 
 	private static void m7() {
 

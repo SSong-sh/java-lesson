@@ -10,13 +10,13 @@
 		<item value="https://github.com/SSong-sh/java.git"/>
 	</list>
 	<list key="CommitDialog.authorValues">
-		<item value="SSong-sh &lt;tjdgp08147@gmail.com&gt;"/>
 		<item value="SSong-sh &lt;tjdgp0817@gmail.com&gt;"/>
+		<item value="SSong-sh &lt;tjdgp08147@gmail.com&gt;"/>
 		<item value="user &lt;user@DESKTOP-COJ9858&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
-		<item value="SSong-sh &lt;tjdgp08147@gmail.com&gt;"/>
 		<item value="SSong-sh &lt;tjdgp0817@gmail.com&gt;"/>
+		<item value="SSong-sh &lt;tjdgp08147@gmail.com&gt;"/>
 		<item value="user &lt;user@DESKTOP-COJ9858&gt;"/>
 	</list>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
