@@ -1,6 +1,6 @@
 package com.test.java;
 
-import java.nio.channels.NonWritableChannelException;
+
 import java.util.Calendar;
 
 public class Ex27_Array {
@@ -13,125 +13,149 @@ public class Ex27_Array {
 
 		// m1();
 		// m2();
-		//m3();
-		//m4();
-		//m5();
-		
-		m6();
-		
+		// m3();
+		// m4();
+		// m5();
+
+		// m6();
+		m7();
 
 	}// main
 
+	private static void m7() {
+
+		int a = 10;
+		chageValue(a);
+		System.out.println(a);
+
+		int[] nums = new int[3];
+		nums[0] = 10;
+		nums[1] = 10;
+		nums[2] = 30;
+
+		chageArray(nums);
+	}
+
+	private static void chageValue(int a) {
+		a = 20;
+		System.out.println(a);
+
+	}
+
+	private static void chageArray(int[] nums) {
+
+		nums[0] = 123;
+		System.out.println(nums[0]);
+
+	}
+
 	private static void m6() {
-		//배열 복사(=참조형)
-		//값형 복사
-		
-		int a =10;
+		// 배열 복사(=참조형)
+		// 값형 복사
+
+		int a = 10;
 		int b;
 		b = a;
-		
-		//값형 > 원본을 수정해도 복사본에 영향을 주지 않는다. 
-		//> Sise effect가 발생하지 않는다.
-		a = 20; //원본 수정
+
+		// 값형 > 원본을 수정해도 복사본에 영향을 주지 않는다.
+		// > Sise effect가 발생하지 않는다.
+		a = 20; // 원본 수정
 		System.out.println("a: " + a);
 		System.out.println("b: " + b);
 		System.out.println();
-		
-		
+
 		int[] nums = new int[3];
-		
+
 		nums[0] = 10;
 		nums[1] = 20;
 		nums[2] = 30;
-		
+
 		int[] copy;
-		
-		//int[] = int[]
+
+		// int[] = int[]
 		copy = nums;
-		
+
 		System.out.println(copy[0]);
 		System.out.println(copy[1]);
 		System.out.println(copy[2]);
-		
-		//원본을 수정하면 복사본도 수정된다.
-		//복사본을 수정하면 원본도 수정된다.
-		//> Side effect 발생
-		
-		
+
+		// 원본을 수정하면 복사본도 수정된다.
+		// 복사본을 수정하면 원본도 수정된다.
+		// > Side effect 발생
+
 		nums[0] = 100;
 		System.out.println(copy[0]);
-		
+
 		copy[1] = 200;
 		System.out.println(nums[1]);
 	}
 
 	private static void m5() {
-		
-		//값형 vs 참조형
-		//- 값형 > 변수에 데이터를 직접 저장
-		//- 참조형 > 데이터는 따로 생성 + 변수에 메모리 주소 저장
-		
-		//*** 원인
-		//- 데이터 크키가 일정 > 값형
-		//- 데이터 크기가 일정하지 않음 > 참조형
-		//- *** 변수만 보고 데이터의 길이를 추측 가능> 값형
-		//- *** 변수만 보고 데이터의 길이를 추측 불가능> 참조형
+
+		// 값형 vs 참조형
+		// - 값형 > 변수에 데이터를 직접 저장
+		// - 참조형 > 데이터는 따로 생성 + 변수에 메모리 주소 저장
+
+		// *** 원인
+		// - 데이터 크키가 일정 > 값형
+		// - 데이터 크기가 일정하지 않음 > 참조형
+		// - *** 변수만 보고 데이터의 길이를 추측 가능> 값형
+		// - *** 변수만 보고 데이터의 길이를 추측 불가능> 참조형
 
 		int a1 = 10;
-		//a1의 메모리 크기? 4byte
-		
+		// a1의 메모리 크기? 4byte
+
 		int a2 = 2000000000;
-		//a2의 메모리 크기? 4byte
-		
+		// a2의 메모리 크기? 4byte
+
 		String s1 = "홍길동";
-		//s1의 메모리 크기? 6byte (자바는 2byte 입력)
-		
+		// s1의 메모리 크기? 6byte (자바는 2byte 입력)
+
 		String s2 = "안녕하세요";
-		//s2의 메모리 크기 ? 10byte
-		
+		// s2의 메모리 크기 ? 10byte
+
 		int[] nums1 = new int[3];
-		//12byte
-		
+		// 12byte
+
 		int[] nums2 = new int[5];
-		//20byte
+		// 20byte
 	}
 
 	private static void m4() {
-		
-		//각 자료형 > 배열
-		
-		//정수 배열(byte, short, int, long)
-		byte [] list1 = new byte[5];
+
+		// 각 자료형 > 배열
+
+		// 정수 배열(byte, short, int, long)
+		byte[] list1 = new byte[5];
 		list1[0] = 10;
 		System.out.println(list1[0]);
-		
-		//실수 배열(float, double)
-		double [] list2 = new double[5];
+
+		// 실수 배열(float, double)
+		double[] list2 = new double[5];
 		list2[0] = 3.14;
 		System.out.println(list2[0]);
-		
-		//문자 배열(char) == String
-		char [] list3 = new char[5];
+
+		// 문자 배열(char) == String
+		char[] list3 = new char[5];
 		list3[0] = 'A';
 		System.out.println(list3[0]);
-		
-		//논리 배열(boolean)
-		boolean [] list4 = new boolean[5];
+
+		// 논리 배열(boolean)
+		boolean[] list4 = new boolean[5];
 		list4[0] = true;
 		System.out.println(list4[0]);
-		
-		//참조형 배열
-		String [] list5 = new String[5];
+
+		// 참조형 배열
+		String[] list5 = new String[5];
 		list5[0] = "홍길동";
 		System.out.println(list5[0]);
-		
-		Calendar c1 = Calendar.getInstance(); //getInstance가 현재 날짜를 만들어줌 
-		
+
+		Calendar c1 = Calendar.getInstance(); // getInstance가 현재 날짜를 만들어줌
+
 		Calendar[] list6 = new Calendar[5];
 		list6[0] = Calendar.getInstance();
 		System.out.println(list6[0]);
-		
-		
+
 	}
 
 	private static void m3() {
