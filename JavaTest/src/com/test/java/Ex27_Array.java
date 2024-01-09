@@ -1,7 +1,6 @@
 package com.test.java;
 
-
-import java.nio.channels.NonWritableChannelException;
+import java.util.Arrays;
 import java.util.Calendar;
 
 public class Ex27_Array {
@@ -19,42 +18,56 @@ public class Ex27_Array {
 		// m5();
 
 		// m6();
-		//m7();
-		m8();
 
+		// m7();
+		// m8();
+		m9();
 	}// main
 
-	private static void m8() {
-		//배열 복사
-		//1. 얕은 복사, Shallow Copy
-		//- 주소값 복사
-		//- Side Effect 발생
-		
-		//2. 깊은 복사, Deep copy
-		//- 실제 배열 복사
-		//- Side Effect 발생 안함
-		
+	private static void m9() {
+
+		// Arrays 클래스
+		// - 배열과 관련된 여러가지 기능을 구현한 클래스
+		// - 배열을 조작하는 편리한 기능을 제공하는 역할
+
 		int nums[] = new int[3];
-		
+
 		nums[0] = 10;
 		nums[1] = 20;
 		nums[2] = 30;
-		
+
+	}
+
+	private static void m8() {
+		// 배열 복사
+		// 1. 얕은 복사, Shallow Copy
+		// - 주소값 복사
+		// - Side Effect 발생
+
+		// 2. 깊은 복사, Deep copy
+		// - 실제 배열 복사
+		// - Side Effect 발생 안함
+
+		int nums[] = new int[3];
+
+		nums[0] = 10;
+		nums[1] = 20;
+		nums[2] = 30;
+
 		int copy[] = new int[3];
-		
-		for(int i=0; i<nums.length;i++) {
-			
-			//방과 방끼리의 복사 > 요소끼리의 복사
-			//int = int
-			copy[i] = nums[i]; //배열끼리 복사는 copy[] = nums[]
-			
+
+		for (int i = 0; i < nums.length; i++) {
+
+			// 방과 방끼리의 복사 > 요소끼리의 복사
+			// int = int
+			copy[i] = nums[i]; // 배열끼리 복사는 copy[] = nums[]
+
 		}
-		
+
 		nums[0] = 100;
 		System.out.println(copy[0]);
-		
-		
-	}
+
+	}// main
 
 	private static void m7() {
 
@@ -119,6 +132,7 @@ public class Ex27_Array {
 
 		nums[0] = 100;
 		System.out.println(copy[0]);
+>>>>>>> 2da0bf343cc7add26f427a6556b2c240f2903c9e
 
 		copy[1] = 200;
 		System.out.println(nums[1]);
