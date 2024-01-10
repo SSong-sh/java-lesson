@@ -2,6 +2,7 @@ package com.test.java;
 
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.function.IntPredicate;
 
 public class Ex27_Array {
 
@@ -26,19 +27,209 @@ public class Ex27_Array {
 		// m10();
 		// m11();
 		// m12();
-		m13();
+		// m13();
+		//m14();
+		//m15();
+		
+		//m16();
+		m17();
 
 	}// main
+
+	
+	private static void m17() {
+		
+		//초기화 리스트
+		int[] nums1 = {10,20,30};
+		
+		int[][] nums2 = 
+			{
+				{ 10, 20, 30 },
+				{ 40, 50, 60 } 
+			};
+		
+		
+		int[][][] nums3 = 
+			{
+				{
+					{10,20,30,},
+					{40,50,60 }
+				},
+				{
+					{70,80,90 },
+					{100,110,120 }
+				}
+				};
+		
+		
+		//Jagged Array, 비정형 배열, 불규칙 배열
+		
+		int[][] nums4 = new int[3][4]; // 이걸로 안됨 
+		
+		//초기화 리스트로만 만들 수 있음
+		
+		int [][] nums5 = 
+			{
+				{10, 20, 30 },
+				{40,50},
+				{60, 70, 80}
+			};
+		
+		//Jagged Array 탐색
+		for(int i=0; i<nums5.length; i++) {
+			for(int j=0; j<nums5[i].length; j++) {
+				System.out.printf("%5d",nums5[i][j]);
+			}
+			System.out.println();
+		}
+		
+		
+		
+	}
+
+	private static void m16() {
+	
+		//배열의 차원
+		//- 1차원 배열, 2차원 배열, 3차원 배열
+		
+		//1차원 배열
+		int[] nums1 = new int[3];
+		nums1[0] = 10;
+		nums1[1] = 20;
+		nums1[2] = 30;
+		
+		System.out.println(Arrays.toString(nums1));
+		
+		
+		//2차원 배열
+		int[][] nums2 = new int[2][3];
+		
+		nums2[0][0] = 10;
+		nums2[0][1] = 20;
+		nums2[0][2] = 30;
+		
+		nums2[1][0] = 40;
+		nums2[1][1] = 50;
+		nums2[1][2] = 60;
+		
+		//nums2 자료형? > int[][]
+		//nums2[0] 자료형 > int[]
+		//nums2[0][0] 자료형 > int
+		
+		nums2[0][1] = 20;
+		System.out.println(nums2.length); //출력 : 2 
+		System.out.println(nums2[0].length); //출력 : 3
+		System.out.println(nums2[0][0]); //출력 : 10(int 값)
+		
+		
+		System.out.println(Arrays.toString(nums2));
+		System.out.println(Arrays.deepToString(nums2));
+	 
+		
+		//2차원 배열 탐색
+		for(int i=0; i<nums2.length; i++) {
+			for(int j=0; j<nums2[0].length; j++) {
+				System.out.print(nums2[i][j] + "\t");
+			} // 하나의 층에 있는 배열 출력
+			System.out.println();
+		}
+		
+		System.out.println();
+		
+		//3차원 배열
+		int[][][] nums3 = new int[2][2][3];
+		
+		nums3[0][0][0] =10;
+		nums3[0][0][1] =20;
+		nums3[0][0][2] =30;
+		
+		nums3[0][1][0] =40;
+		nums3[0][1][1] =50;
+		nums3[0][1][2] =60;
+		
+		nums3[1][0][0] =70;
+		nums3[1][0][1] =80;
+		nums3[1][0][2] =90;
+		
+		nums3[1][1][0] =100;
+		nums3[1][1][1] =110;
+		nums3[1][1][2] =120;
+		
+		
+		for(int i=0;i<nums3.length;i++) {
+			for(int j=0; j<nums3[0].length;j++) {
+				for(int k=0; k<nums3[0][0].length;k++) {
+					System.out.printf("%5d",nums3[i][j][k]);
+				}
+				System.out.println();
+			}
+			System.out.println();
+		}
+		
+		
+	}
+
+
+	//배열 요소 삭제 (Deletion)
+	private static void m15() {
+		//- Left Shift > 왼쪽으로 한칸씩 이동했다.
+		int[] nums = { 1, 2, 3, 4, 5 };
+		int index = 1;
+		
+		System.out.println(Arrays.toString(nums));
+		
+		for (int i=index; i <=nums.length-2; i++) {
+			// System.out.println(i);
+			nums[i] = nums[i+1];
+			
+		}
+		
+		nums[nums.length-1] =0;
+		System.out.println(Arrays.toString(nums));
+	}
+
+	private static void m14() {
+		// 배열 조작
+		// - 삽입, 삭제
+		// - 비용 발생
+
+		// 배열 요소 삽입(Insertion)
+		// - Right Shift > 오른쪽으로 한칸씪 이동했다.
+		// - *** 삽입 이후의 요소들이 인덱스가 변경된다. 
+		int[] nums = { 1, 2, 3, 4, 5 };
+		int index = 1;
+		int value = 9;
+
+		System.out.println("nums[0] = " + nums[0]);
+		System.out.println("nums[3] = " + nums[3]);
+
+		System.out.println(Arrays.toString(nums));
+
+		for (int i = nums.length - 2; i >= index; i--) {
+			// System.out.println(i);
+			nums[i + 1] = nums[i];
+			System.out.println(Arrays.toString(nums));
+		}
+
+		nums[index] = value;
+		System.out.println(Arrays.toString(nums));
+
+		System.out.println("nums[0] = " + nums[0]); //처음에 넣었던 값을 기억 못하면 큰일!
+		System.out.println("nums[3] = " + nums[3]); //값이 바뀌는 데 에러는 안 떠있음 
+	}
+	
+	
+	
 
 	private static void m13() {
 
 		int[] nums = { 5, 3, 1, 4, 2 };
 		String[] names = { "홍길동", "아무개", "테스트", "유재석", "강아지", "고양이", "도깨비", "박명수", "조세호", "병아리" };
-		
-		//Quick sort(오름차순) - 역정렬 메소드는 없음(직접 구현)
+
+		// Quick sort(오름차순) - 역정렬 메소드는 없음(직접 구현)
 		Arrays.sort(nums);
 		System.out.println(Arrays.toString(nums));
-		
+
 		Arrays.sort(names);
 		System.out.println(Arrays.toString(names));
 	}
