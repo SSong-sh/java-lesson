@@ -2,6 +2,7 @@ package com.test.java;
 
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Scanner;
 import java.util.function.IntPredicate;
 
 public class Ex27_Array {
@@ -32,11 +33,85 @@ public class Ex27_Array {
 		//m15();
 		
 		//m16();
-		m17();
+		//m17();
+		//m18();
+		//m19();
+		m20();
 
 	}// main
 
 	
+
+
+
+	private static void m20() {
+		
+		int[][] nums = new int[5][5];
+		
+		int n = 1;
+		
+		
+		//2차원 배열 값 넣기
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<5; j++) {
+				nums[i][j] = n; //j와 i로 바꾸면 세로로 2차원 출력
+				n++;
+			}
+
+		}
+		
+//		for(int i=0; i<5; i++) {
+//			for(int j=4; j>=0; j--) {
+//				nums[i][j] = n; //j를 반대로 바꾸니까 끝방부터 출력
+//				n++;
+//			}
+//
+//		}
+		
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<5; j++) {
+				System.out.printf("%3d",nums[i][j]);
+				
+			}
+			System.out.println();
+		}
+		
+	}
+
+
+
+
+
+	private static void m19() {
+		//***** 배열의 길이는 불변이다.
+		//- 한번 만들어진 배열의 방은 더 늘리거나 삭제할 수 없다.
+		
+		///int[] kor = new int[300]; //정적으로 길이 할당
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("학생수 : ");
+		
+		int lenght = scanner.nextInt();
+		
+		int[] kor = new int [lenght]; //동적으로 길이 할당
+		
+		System.out.println(kor.length);
+		
+		
+	}
+	
+	
+	private static void m18() {
+	
+		for(int i=0; i<100; i++) {
+			System.out.println((int)(Math.random()*10)+1);
+		}
+	
+}
+
+
 	private static void m17() {
 		
 		//초기화 리스트
