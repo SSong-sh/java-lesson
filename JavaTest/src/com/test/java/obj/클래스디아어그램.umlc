@@ -37,6 +37,24 @@
       <operations public="true" package="true" protected="true" private="true" static="false"/>    
     </display>  
   </class>  
+  <class id="5" language="java" name="com.test.java.obj.Member" project="JavaTest" 
+    file="/JavaTest/src/com/test/java/obj/Ex32_Class.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="226" y="327"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.test.java.obj.Ex32_Class" project="JavaTest" 
+    file="/JavaTest/src/com/test/java/obj/Ex32_Class.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="104" y="300"/>    
+    <display resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" sort="true" 
+      accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="false"/>    
+    </display>  
+  </class>  
   <classifier-attribute resize-to-fit="true" stereotype="true" package="true" default-value="false" signature="true" 
     sort="true" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="false"/>    
