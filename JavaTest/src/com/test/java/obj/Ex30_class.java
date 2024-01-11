@@ -2,7 +2,7 @@ package com.test.java.obj;
 
 import java.nio.channels.NonWritableChannelException;
 
-public class Ex30_class {
+public class Ex30_class { //public이 붙은 클래스가 파일명 => 대표 클래스 
 	
 	public static void main(String[] args) {
 		/*
