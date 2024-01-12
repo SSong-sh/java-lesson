@@ -321,7 +321,7 @@ public class Ex29_String {
 		index = txt.indexOf("홍길동");
 		System.out.println(index);
 		
-		index = txt.indexOf("홍길동",index + 3);
+		index = txt.indexOf("홍길동",index);
 		System.out.println(index); //10번부터 찾음
 		
 		index = txt.indexOf("홍길동",index + 3);
