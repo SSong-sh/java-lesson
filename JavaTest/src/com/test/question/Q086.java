@@ -34,7 +34,7 @@ public class Q086 {
 		
 		num = scan.nextLine();
 		
-		while(num.length()>= 3) {
+		while(num.length()> 3) {
 			
 			comma = "," + num.substring(num.length()-3,num.length()) + comma; // 다시 comma에 저장 해줘야 함
 			
@@ -42,6 +42,7 @@ public class Q086 {
 		}
 		
 		System.out.println("결과: " + num + comma);
+		
 	}
 
 }
