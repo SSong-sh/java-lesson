@@ -38,6 +38,10 @@ public class Monitor {
 		}
 		
 	}
+	@Override
+	public String toString() {
+		return "Monitor [model=" + model + ", size=" + size + ", price=" + price + "]";
+	}
 	
 //	@Override
 //	public String toString() {

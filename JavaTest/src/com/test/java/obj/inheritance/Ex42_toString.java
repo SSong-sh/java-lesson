@@ -32,6 +32,7 @@ public class Ex42_toString {
 		
 		//info()와 기능적 차이 없음
 		//유명세~
+		//사용자 경험을 유지 시켜줌
 		System.out.println(m1.toString()); //아래와 출력값은 똑같음
 		System.out.println(m1);
 		
