@@ -38,5 +38,11 @@ public class Monitor {
 		}
 		
 	}
+	
+//	@Override
+//	public String toString() {
+//		
+//		return String.format("%s[%,d원,%d인치]", this.model,this.price,this.size);
+//	}
 
 }
