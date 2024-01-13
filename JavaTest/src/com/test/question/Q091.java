@@ -82,13 +82,15 @@ public class Q091 {
 
 				} else if (op.equals("/")) {
 
-					result = a * b;
+					result = a / b;
 
 				} else if (op.equals("%")) {
 
 					result = a % b;
 
 				}
+				
+				System.out.printf("%d %s %d = %d", a, op, b, result);
 
 			} else {
 				System.out.println("피연산자가 부족합니다!!!!!");
@@ -98,7 +100,6 @@ public class Q091 {
 			System.out.println("연산자가 올바르지 않습니다!!!!");
 		}
 
-		System.out.printf("%d %s %d = %d", a, op, b, result);
 
 	}
 
