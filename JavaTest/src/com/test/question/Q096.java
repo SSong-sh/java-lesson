@@ -6,10 +6,12 @@ public class Q096 {
 		//난수 생성
 		//- 숫자만
 		//- 문자열 난수? + 배열
+	
+		Q_Box box1 = new Q_Box();
+
+		box1.cook();
+		box1.check();
+		box1.list();
 		
-		String[] color = {"빨강","노랑","파랑","검정","보라","주황"};
-		
-		//난수 > 방번호
-		System.out.println(color[(int)Math.random() * color.length]);
 	}
 }
