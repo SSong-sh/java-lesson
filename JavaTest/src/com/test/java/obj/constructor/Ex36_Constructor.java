@@ -123,3 +123,28 @@ class Cup {
 	
 }
 
+
+//객체의 멤버를 초기화하는 역할
+//객체는 메모리에 만들어진 인스턴스 => c는 클래스의 맴버
+class Mouse{
+	
+	private int a;
+	private int b;
+	private static int c;
+	
+	//객체 생성자 > 객체 내부를 초기화
+	public Mouse(int a, int b) {
+		super();
+		this.a = a;
+		this.b = b;
+	}
+	
+	//정적 생성자 > 정적 멤버만을 초기화
+	//- 매개변수 없음
+	//- 정적 생성자는 직접 호출이 불가능
+	//- 자바가 호출한다.
+	static {
+		Mouse.c = 0;
+	}
+}
+
