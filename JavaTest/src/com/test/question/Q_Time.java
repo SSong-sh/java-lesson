@@ -1,6 +1,6 @@
 package com.test.question;
 
-public class Q_Time {
+public class Q_Time { //Q099
 	
 	private int hour;
 	private int minute;
