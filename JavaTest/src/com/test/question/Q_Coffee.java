@@ -1,6 +1,12 @@
 package com.test.question;
 
+
+//클래스로부터 객체를 생성하지 않고, 클래스 이름을 통해 직접 접근
+//클래스로 생성되는 모든 객체들이 동일한 값을 가지는 멤버 변수
+
 public class Q_Coffee {
+	
+	
 	
 	private static int bean;
 	private static int water;
@@ -22,7 +28,7 @@ public class Q_Coffee {
 	private static int espresso;
 
 	
-
+	//static block => 클래스 파일이 로딩되는 순간 가장 먼저 실행
 	static {
 		
 		Q_Coffee.beanUnitPrice =1;
@@ -46,7 +52,9 @@ public class Q_Coffee {
 		
 	}
 
-
+	//static method 
+	//객체를 생성하지 않고 접근이 가능
+	//참조 변수를 통해서만 접근 할 수 있는 일반 멤버 변수는 static method에서 사용불가능
 	public static int getBean() {
 		return bean;
 	}
@@ -130,7 +138,9 @@ public class Q_Coffee {
 	
 	
 	
-	
+	//에소프레소에서 사용한 원수를 전체 커피의 원두에 저장 (=>원자재 소비량에 쓰일 것)
+	//+ 원두 총 가격 누적 (=> 매출액에 쓰일 것)
+	//+ 에스프레소 잔 수 누적(=>음료 판매량에 쓰일것)
 	public static void countCoffee(Q_Espresso espresso) {
 		Q_Coffee.espresso++;
 		Q_Coffee.bean+= espresso.getBean();

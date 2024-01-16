@@ -2,6 +2,9 @@ package com.test.question;
 
 public class Q101 {
 	public static void main(String[] args) {
+		
+		
+		
 		//바리스타
 		Q_Barista barista = new Q_Barista();
 

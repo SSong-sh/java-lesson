@@ -5,7 +5,7 @@ public class Q_Barista {
 
 	public Q_Espresso makeEspresso(int bean) {
 		
-		Q_Espresso espresso = new Q_Espresso(bean);
+		Q_Espresso espresso = new Q_Espresso(bean); //생성자 호출
 		Q_Coffee.countCoffee(espresso);
 		
 		return espresso;
@@ -14,15 +14,14 @@ public class Q_Barista {
 	public Q_Latte makeLatte(int bean, int milk) {
 		
 		Q_Latte latte = new Q_Latte(bean, milk);
-		Q_Coffee.countCoffee(latte);;
-		
+		Q_Coffee.countCoffee(latte);
 		return latte;
 	}
 	
 	public Q_Americano makeAmericano(int bean, int water, int ice) {
 		
 		Q_Americano americano = new Q_Americano(bean, water, ice);
-		Q_Coffee.countCoffee(americano);;
+		Q_Coffee.countCoffee(americano);
 		
 		return americano;
 	}
