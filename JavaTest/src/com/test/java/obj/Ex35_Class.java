@@ -1,5 +1,8 @@
 package com.test.java.obj;
 
+import com.test.java.obj.Child;
+import com.test.java.obj.Parent;
+
 public class Ex35_Class {
 	
 	public static void main(String[] args) {

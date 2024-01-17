@@ -1,5 +1,7 @@
 package com.test.java.obj;
 
+import com.test.java.obj.Parent;
+
 public class Child {
 	
 	private String name;
