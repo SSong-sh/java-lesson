@@ -27,12 +27,12 @@ public class Ex23_for {
 		//m5();
 		//m6();
 		//m7();
-		//m8();
+		m8();
 		//m9();
 		//m10();
 		//m11();
 		//m12();
-		m13();
+		//m13();
 		
 	}//main
 
@@ -216,7 +216,7 @@ public class Ex23_for {
 			sum += num;
 		}
 		
-		System.out.println();
+		System.out.println(sum);
 		
 		
 	}

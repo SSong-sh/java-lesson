@@ -45,7 +45,7 @@ public class Ex21_if {
 		
 	}//main
 
-	private static void m5() throws NumberFormatException, IOException {
+	private static void m5() throws IOException {
 		//성적(0~100) 입력 > 합격/불합격 
 		//+ 유효성 검사
 		
@@ -59,7 +59,7 @@ public class Ex21_if {
 		//2. 불합격일때
 		
 		//로직이 다르기 떄문에 1,2번과 3번은 분리 해줘야 함
-		//3. 잘못 읿력(유효성)
+		//3. 잘못 입력(유효성)
 		
 		if(score >= 60 && score <=100) {
 			System.out.println("합격");

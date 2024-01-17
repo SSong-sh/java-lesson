@@ -52,12 +52,14 @@ public class Ex25_while {
 	private static void m4() {
 		
 		//1~10 출력
-		int n = 11;
+		int n = 1;
 		
 		while (n <= 10) {
 			System.out.println(n);
 			n++;
 		}
+		
+		System.out.println();
 		
 		int m = 11;
 		
