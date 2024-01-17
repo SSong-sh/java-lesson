@@ -75,7 +75,7 @@ public class MyQueue {
 		//꺼내면 사라짐 
 		//left shift 발생
 		
-		for(int i=0; i<this.list.length-2;i++) {
+		for(int i = 0; i<this.list.length-2;i++) {
 			this.list[i] = this.list[i+1];
 			
 		}
