@@ -4,10 +4,6 @@ import java.util.ArrayList;
 
 import java.util.Random;
 
-import javax.crypto.EncryptedPrivateKeyInfo;
-import javax.print.DocFlavor.STRING;
-
-import org.w3c.dom.ls.LSOutput;
 
 public class Ex54_ArrayList {
 	
@@ -62,10 +58,167 @@ public class Ex54_ArrayList {
 		//m3();
 		//m4();
 		//m5();
-		m6();
+		//m6();
+		//m7();
+		m8(); //컬렉션 만듥디
+		
+		
+	}
+
+	private static void m8() {
+		
+		//배열 생성
+		MyArrayList list = new MyArrayList();
+		
+
+		//추가
+		list.add("홍길동");
+		list.add("아무개");
+		list.add("하하하");
+//		list.add("후후후");
+
+		
+//		list.add("후후후");
+//		list.add("헤헤헤");
+//		list.add("가가가");
+//		list.add("나나나");
+//		System.out.println(list);
+//		
+//		list.add("다다다");
+		System.out.println(list);
+		
+
+		//읽기
+//		System.out.println(list.get(0));
+//		System.out.println(list.get(1));
+//		System.out.println(list.get(2));
+//		System.out.println(list.get(3));
+		
+		System.out.println();
+
+		//개수
+		System.out.println(list.size());
+		
+		System.out.println();
+
+		//탐색 + 읽기
+//		for (int i=0; i<list.size(); i++) { //i의 범위가 배열의 길이가 아닌 배열의 데이터의 개수
+//		      System.out.println(list.get(i));
+//		}
+//		
+		System.out.println();
+
+		//수정
+		list.set(0, "우하하");
+//		System.out.println(list.get(0));
+		System.out.println("삭제전");
+		System.out.println(list);
+
+		//삭제
+		list.remove(1);
+		System.out.println("삭제 후");
+		System.out.println(list);
+//		for (int i=0; i<list.size(); i++) {
+//		      System.out.println(list.get(i));
+//		}
+//		System.out.println();
+		
+		list.add("가가가");
+		System.out.println(list);
+		
+		
+		list.remove("하하하");
+		System.out.println(list);
+
+		//삽입 => 배열방을 늘려주는 작업 필요 ! 데이터 손실 발생
+		list.add(1, "호호호");
+		list.add(1, "호호호");
+		list.add(1, "호호호");
+		list.add(1, "호호호");
+
+//		for (int i=0; i<list.size(); i++) {
+//		      System.out.println(list.get(i));
+//		}
+		System.out.println(list);
+		
+		System.out.println();
+
+		//검색
+		if (list.indexOf("홍길동") > -1) {
+		      System.out.println("홍길동 있음");
+		} else {
+		      System.out.println("홍길동 없음");
+		}
+		if (list.indexOf("호호호") > -1) {
+			System.out.println("호호호 있음");
+		} else {
+			System.out.println("호호호 없음");
+		}
+		
+		System.out.println(list.lastIndexOf("호호호"));
+		System.out.println(list.indexOf("호호호"));
+		
+		System.out.println(list.indexOf("호호호",2));
+		System.out.println(list.lastIndexOf("호호호",2));
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println(list);
+
+		//초기화 
+		list.clear();
+		System.out.println(list);
+		System.out.println(list.size());
+		
+		
+		//trimToSize() => 내가 확실하게 몇개의 데이터를 가질지 알면 사용 ! => 그래서 대부분 사용하지 않음
+		list.add("홍길동");
+		list.add("아무개");
+		list.add("강아지");
+		list.add("고양이");
+		list.add("병아리");
+		list.add("참새");
+		System.out.println(list);
+		
+		list.trimToSize();
+		System.out.println(list);
+		
+		
+		MyArrayList list2 = new MyArrayList(100); //초기용량을 지정해주면 쓸모없는 더블링이 생기지 않고 length가 100으로 잡힘
+		
+		for(int i=0; i<100;i++) {
+			list2.add(i+"");
+		}
+		System.out.println(list2); //MyArrayList() = length는 더블링 때문에 4,8,~,128까지 생김
 		
 		
 		
+	}
+
+	private static void m7() {
+		
+		ArrayList<Integer> nums = new ArrayList<>();
+		
+		System.out.println(nums.size());
+		
+		nums.add(10);
+		nums.add(20);
+		nums.add(30);
+		nums.add(40);
+		
+		
+		nums.add(50); //자리가 부족하면 원래 배열길이의 2배 길이로 새로운 배열을 만들어서 교체함 => 유연하게 늘어나는 것처럼 보임
+		
+		//size() :내부 배열의 길이(x) >  데이터의 개수
+		System.out.println(nums.size());
+		
+//		for(int i=0;i<10000000;i++) {
+//			nums.add(i);
+//		}
+//		
+//		System.out.println(nums.size());
+		//System.out.println(nums);
 	}
 
 	private static void m6() {
