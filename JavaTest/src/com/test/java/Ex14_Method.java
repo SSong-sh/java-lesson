@@ -29,6 +29,7 @@ public class Ex14_Method {
 		 
 		 
 		 
+		 
 		 */
 		
 		
@@ -56,7 +57,6 @@ public class Ex14_Method {
 		hello();
 		hello();
 		hello();
-		
 
 	
 		

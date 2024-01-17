@@ -1,6 +1,5 @@
 package com.test.java;
 
-import java.nio.channels.InterruptedByTimeoutException;
 
 public class Ex15_Method {
 	
