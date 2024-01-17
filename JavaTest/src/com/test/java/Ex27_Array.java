@@ -23,16 +23,16 @@ public class Ex27_Array {
 		// m5();
 		// m6();
 		// m7();
-		// m8();
+		 //m8();
 		// m9();
 		// m10();
 		// m11();
-		// m12();
+		 //m12();
 		// m13();
 		//m14();
-		m15();
+		//m15();
 		
-		//m16();
+		m16();
 		//m17();
 		//m18();
 		//m19();
@@ -285,6 +285,8 @@ public class Ex27_Array {
 			nums[i + 1] = nums[i];
 			System.out.println(Arrays.toString(nums));
 		}
+		
+		System.out.println();
 
 		nums[index] = value;
 		System.out.println(Arrays.toString(nums));
@@ -346,7 +348,9 @@ public class Ex27_Array {
 		int[] nums = { 5, 3, 1, 4, 2 };
 		System.out.println(Arrays.toString(nums));
 
+		//가장 큰 또는 작은 원소가 배열의 끝으로 이동
 		for (int i = 0; i < nums.length; i++) { // 사이클(0,1,2,3)
+			// 서로 인접한 두 원소를 비교하고 필요한 경우 위치 교환
 			for (int j = 0; j < nums.length - 1 - i; j++) {
 
 				// 오름차순
@@ -355,17 +359,23 @@ public class Ex27_Array {
 					nums[j] = nums[j + 1];
 					nums[j + 1] = temp;
 				}
+			}
+		}
+		System.out.println("오름차순 정렬: " + Arrays.toString(nums));
+
+		for (int i = 0; i < nums.length; i++) {
+			for (int j = 0; j < nums.length - 1 - i; j++) {
 
 				// 내림차순
-				if (nums[j] > nums[j + 1]) {
+				if (nums[j] < nums[j + 1]) {
 					temp = nums[j];
 					nums[j] = nums[j + 1];
 					nums[j + 1] = temp;
 				}
 			}
-
 		}
-		System.out.println(Arrays.toString(nums));
+
+		System.out.println("내림차순 정렬: " + Arrays.toString(nums));
 
 		// String name1 = "홍길동";
 		// String name2 = "아무개";
