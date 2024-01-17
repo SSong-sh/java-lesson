@@ -51,15 +51,15 @@ public class Ex12_Operator {
 		//==, !=
 		//문자열(참조형) 비교
 		
-		int n1 = 100;
-		int n2 = 100;
-		int n3 = 50;
-		
-		n3 = n3 + 50;
-		
-		System.out.println(n1 == n2);
-		System.out.println(n1 != n2);
-		System.out.println(n1 == n3);
+//		int n1 = 100;
+//		int n2 = 100;
+//		int n3 = 50;
+//		
+//		n3 = n3 + 50;
+//		
+//		System.out.println(n1 == n2);
+//		System.out.println(n1 != n2);
+//		System.out.println(n1 == n3);
 		
 		
 		String s1 = "홍길동";

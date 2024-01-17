@@ -37,7 +37,7 @@ public class Ex10_Casting {
 		
 		//Short = Byte
 		//s1 = b1;
-		s1 = (short)b1;
+		s1 = b1;
 		
 		
 		System.out.println(s1); //복사본
@@ -91,14 +91,14 @@ public class Ex10_Casting {
 		//정수 > 실수
 		
 		
-		int n1 = 100; //원본(4)
-		float n2; //복사본(4)
+//		int n1 = 100; //원본(4)
+//		float n2; //복사본(4)
+//		
+//		//float = ing
+//		//암시적 형변환 > 안전
+//		n2 = n1;
 		
-		//float = ing
-		//암시적 형변환 > 안전
-		n2 = n1;
-		
-		System.out.println(n2);
+//		System.out.println(n2);
 		
 		int n3; //복사본(4)
 		float n4 = 30000000000F; //원본(4)
@@ -109,13 +109,13 @@ public class Ex10_Casting {
 		System.out.println(n3);
 		
 		
-		long n5;
-		float n6 = 10;
-		
-		//long(8) = float(4)
-		n5 = (long) n6;
-		
-		System.out.println(n5);
+//		long n5;
+//		float n6 = 10;
+//		
+//		//long(8) = float(4)
+//		n5 = (long) n6;
+//		
+//		System.out.println(n5);
 		
 		//*** 정수와 실수간의 크기 비교는 단순한 메로리 크기가 아닌, 실제 저장하는 수의 범위로 비교한다.
 		
