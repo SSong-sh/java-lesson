@@ -5,6 +5,16 @@ import java.util.Scanner;
 
 public class Q110 {
 	
+	/*
+	 
+	 요구사항
+	 파일의 경로를 입력받아 파일 정보를 출력하시오.
+
+	 조건..
+	 파일 크기 단위 변환 출력(소수이하 1자리까지) : B, KB, MB, GB, TB
+	 
+	 */
+	
 	public static void main(String[] args) {
 		
 	Scanner scan = new Scanner(System.in);
