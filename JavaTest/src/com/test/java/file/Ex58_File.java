@@ -48,9 +48,9 @@ public class Ex58_File {
 		//m10();
 		//m11();
 		
-		//m12();
+		m12();
 		//m13();
-		m14();
+		//m14();
 		
 	}//main
 
@@ -91,6 +91,7 @@ public class Ex58_File {
 				//파일을 지우는 상황 = 모든 폴더를 찾아 파일을 다 지움
 				file.delete();
 				
+				//파일을 세는 상황
 //				fileCount++;
 //				dirSize += file.length();
 				
@@ -187,8 +188,8 @@ public class Ex58_File {
 		File dir = new File(path);
 		
 		if(dir.exists()) {
-			
-			//대상 홀더의 내용물 > 목록(배열)으로 가져오기 
+//			
+//			//대상 홀더의 내용물 > 목록(배열)으로 가져오기 
 //			String[] list = dir.list();
 //			
 //			for(String item : list) {
@@ -197,12 +198,12 @@ public class Ex58_File {
 			
 		//객체로 돌려줌 
 		File[] list = dir.listFiles(); 
-//		for(File item : list) {
-//			
+		for(File item : list) {
+			
 //			System.out.println(item.getName());
 //			System.out.println(item.isFile()); //false는 폴더
-//			
-//		}
+			
+		}
 		
 		for (File item : list) {
 
@@ -321,6 +322,7 @@ public class Ex58_File {
 			//폴더가 없음
 			//중간에 없는 폴더까지 포함해 최종 ddd 폴더까지 만들기
 			boolean result = dir.mkdirs();// make directorys
+
 			System.out.println(result);
 			
 		}else {
