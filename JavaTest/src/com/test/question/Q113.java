@@ -28,15 +28,13 @@ public class Q113 {
 		
 		int n = 1;
 		
-		File[] list = dir.listFiles();
-		
-		
+		File[] list = dir.listFiles(); //폴더인지 파일인지 확인해야하지만... 파일밖에 없음
 		
 		for (File file : list) {
 			if(file.getName().substring(file.getName().lastIndexOf(".")+1).toLowerCase().equals("mp3")) {
 				
 				//새로운 파일 객체 만들기
-				File temp = new File(path + "//" + String.format("[%03d]%s", n, file.getName()));
+				File temp = new File(path + "\\" + String.format("[%03d]%s", n, file.getName()));
 				file.renameTo(temp);
 				n++;
 				
