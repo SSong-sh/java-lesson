@@ -1,6 +1,9 @@
 package com.test.question;
 
+import java.awt.FocusTraversalPolicy;
 import java.io.File;
+import java.util.HashMap;
+import java.util.Set;
 
 public class Q114 {
 	
@@ -23,18 +26,27 @@ public class Q114 {
 		
 		File dir = new File(path);
 		
-		int count = 0;
+		HashMap<String, Integer> count = new HashMap<>();
 		
 		File[] list = dir.listFiles();
 		
 		for(File file : list) {
-			if(file.getName().substring(file.getName().lastIndexOf(".")+1).equals("gif")){
-				count++;
-				File temp = new File(path + "\\" + String.format("[%03d]%s", count, file.getName()));
-				file.renameTo(temp);
-				
-				
+			
+			String ext = file.getName().substring(file.getName().lastIndexOf(".")+1);
+			
+			if(count.get(ext) ==null){
+				count.put(ext, 0);
+			}else {
+				count.put(ext, count.get(ext) + 1);
 			}
+		}
+		
+		System.out.println(count);
+		
+		Set<String>keys = count.keySet();
+		
+		for(String key : keys) {
+			System.out.printf("*.%s: %d개\n",key,count.get(key));
 		}
 		
 	}
