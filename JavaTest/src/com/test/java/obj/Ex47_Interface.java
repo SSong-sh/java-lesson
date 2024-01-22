@@ -7,7 +7,7 @@ public class Ex47_Interface {
 		/*
 		 
 		 인터페이스, Interface
-		 - 클래스의 일정
+		 - 클래스의 일종
 		 - 자료형
 		 
 		 */

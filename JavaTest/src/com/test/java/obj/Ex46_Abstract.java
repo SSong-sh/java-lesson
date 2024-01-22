@@ -25,15 +25,15 @@ public class Ex46_Abstract {
 //		//-Ex30_Class.java> Point 클래스
 //		Point P1 = new Point();
 		
-		Keyboard k1 = new Keyboard();
-
-		k1.a = 10;
-		k1.aaa();
+//		Keyboard k1 = new Keyboard();
+//
+//		k1.a = 10;
+//		k1.aaa();
 		// k1.bbb(); // 구현부가 정의되어 있지 않기 때문에 안됨
 
-//		Mouse m1 = new Mouse();
+		G305 m1 = new G305();
 //
-//		m1.bbb();
+		m1.click();
 
 	}
 }

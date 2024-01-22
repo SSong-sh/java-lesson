@@ -26,6 +26,7 @@ public class Member {
 		return String.format("%s(%d)",this.name,this.age);
 	}
 
+
 	@Override
 	public int hashCode() {
 		
@@ -43,7 +44,7 @@ public class Member {
 		
 		return this.hashCode() == obj.hashCode();
 	}
-	
+
 	
 	
 
