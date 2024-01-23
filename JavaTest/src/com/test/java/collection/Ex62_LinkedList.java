@@ -155,8 +155,8 @@ public class Ex62_LinkedList {
 		list2.add(200);
 		list2.add(300);
 		
-		System.out.println(list1.size());
-		System.out.println(list2.size());
+		System.out.println(list1.size()); 
+		System.out.println(list2.size()); 
 		
 		System.out.println(list1.get(0));
 		System.out.println(list2.get(0));
