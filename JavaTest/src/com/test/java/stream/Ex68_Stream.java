@@ -11,6 +11,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.Set;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -73,12 +75,12 @@ public class Ex68_Stream {
 		 2. 최종 파이프
 		 
 		 최종처리
-		 - forEach()
+		 - forEach(Consumer)
 		 - 최종 파이프
 		 - 앞의 스트림으로부터 요소를 받아 최종 처리하는 메서드
 		 
 		 필터링
-		 - filter()
+		 - filter(Predicate)
 		 - 중간 파이프
 		 - 앞의 스트림으로부터 요소를 받아 조건에 맞는 요소만 남기고 맞지 않는 요소는 버림
 		 
@@ -91,12 +93,12 @@ public class Ex68_Stream {
 		 - Set 성질
 		 
 		 변환
-		 - map(), mapXXX()
+		 - map(Function), mapXXX(Function)
 		 - 중간 파이프
 		 - 앞의 스트림의 요소를 다른 형태로 변환 후 새로운 스트림을 반환한다.
 		 
 		 정렬
-		 - sorted()
+		 - sorted(Comparator)
 		 - 중간 파이프
 		 - 사용법이 배열, 컬렉션의 sort() 메서드와 동일 > Comparator
 		 
@@ -107,7 +109,14 @@ public class Ex68_Stream {
 		 - boolean anyMatch(Predicate) : 일부 요소가 조건을 만족하는지?
 		 - boolean noneMatch(Predicate): 모든 요소가 조건을 불만족하는지?
 		 
-		 
+		 집계/통계 , Reduce
+		 - count()
+		 - max()
+		 - min()
+		 - sum()
+		 - avg()
+		 - 최종파이프
+		 - 앞의 스트림의 요소를 취합해서 하나의 통계값을 생성
 		 
 		 
 		 */
@@ -120,7 +129,87 @@ public class Ex68_Stream {
 		//m6();
 		//m7();
 		//m8();
-		m9();
+		//m9();
+		m10();
+	}
+
+	private static void m10() {
+		
+		//count()
+		long count = Data.getIntList().stream().count();
+		System.out.println(count);
+		
+		System.out.println(Data.getUserList().stream().filter(user -> 
+		user.getGender() == 1).count()); //7
+		
+		System.out.println(Data.getUserList().stream().filter(user -> 
+		user.getGender() == 2).count()); //3
+		
+		//max(), min()
+		List<Integer> nums = Data.getIntList();
+		
+		int max = -1; //nums안의 모든 숫자 가장 숫자 -1
+		int min = 101; //nums안의 모든 숫자 중 가장 큰 숫자 +1
+		
+		for(int n : nums) {
+			if(n>max) {
+				max = n;
+			}
+			if(n<min) {
+				min =n;
+			}
+		}
+		System.out.println(max); //99
+		System.out.println(min); //0
+		
+		//비교 기준 제시
+		//Optional<Integer>
+		//- Integer or int 타입과 동일한 자료형
+		//- 값형은 null을 가질 수 없다.
+		//- 참조형은 null을 가질 수 있다. 
+		// - null을 가질 수 있는 int
+		System.out.println( nums.stream().max((a,b)-> a-b)); //Optional[99]
+		
+		//만약 max가 없을 때 int는 null값을 가질 수 없다 ! 
+		//하지만 null값을 돌려주는게 좋음 =>  optinal 이용
+		//int result = nums.stream().max((a,b)-> a-b); //에러
+		Optional<Integer> result = nums.stream().max((a,b)-> a-b); //Optional[99]
+		
+		System.out.println(result.get()); //99
+		
+		Optional<User> user = Data.getUserList().stream().max((user1, user2) ->
+		user1.getHeight() - user2.getHeight());
+		
+		System.out.println(user.get());
+		
+		Optional<User> user3 = Data.getUserList().stream().min((user1, user2) ->
+		user1.getHeight() - user2.getHeight());
+		System.out.println(user3.get());
+		
+		//스트림 요소 타입 > 숫자o or 숫자x
+		//- count(), max(), min() > Stream<Type> > 모든 자료형에 적용 가능
+		
+		//스트림 요소 타입 > 숫자o
+		//- sum(), abg() > IntStream, DoubleStream.. > 숫자 전용 스트림
+		
+		//nums.stream() == Stream<Integer>
+		//nums.stream().mapToInt(n -> n) == IntStream - Integer 전용스트림 반환
+		
+		//sum은 값이 없어도 0을 무조건 반환 => 반환값이 int
+		System.out.println(nums.stream().mapToInt(n -> n).sum()); //결과: 4746
+		
+		//average는 값이 없으면 반환할 수 없기 때문에 optional값으로 리턴
+		OptionalDouble avg= nums.stream().mapToInt(n -> n).average();
+		System.out.println(avg.getAsDouble()); //결과: 47.46
+		
+		// 남자 평균 키?
+		double height = Data.getUserList().stream()
+							.filter(u -> u.getGender()==1)
+							.mapToInt(u -> u.getHeight()) //Stream<User> => Stream<Integer>
+							.average()
+							.getAsDouble();
+						
+		System.out.println(height); //결과 : 174.57142857142858
 	}
 
 	private static void m9() {
