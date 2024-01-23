@@ -10,9 +10,13 @@ public class Ex52_Generic {
 		Item<String> s1 = new Item<String>();
 		s1.c = "홍길동";
 		
+		System.out.println(s1.c);
+		
 		//무조건 정수형만 넣어야 함 => Object와 차이점
 		Item<Integer> s2 = new Item<Integer>();
 		s2.c = 100;
+		
+		System.out.println(s2.c);
 		
 //		Pen<Boolean> p1 = new Pen<>(true);
 //		Pen<Boolean> p2 = new Pen<Boolean>();

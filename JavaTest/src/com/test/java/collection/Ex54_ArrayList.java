@@ -54,13 +54,13 @@ public class Ex54_ArrayList {
 		 */
 
 		//m1();
-		//m2();
+		m2();
 		//m3();
 		//m4();
 		//m5();
 		//m6();
 		//m7();
-		m8(); //컬렉션 만듥디
+		//m8(); //컬렉션 만듥디
 		
 		
 	}
@@ -350,20 +350,20 @@ public class Ex54_ArrayList {
 
 		// 2. 요소 개수
 		// -int size()
-		System.out.println(list.size());
+		System.out.println(list.size()); //결과 : 5
 
 		// 3. 요소 읽기
 		// - T get(int index)
-		System.out.println(list.get(2));
+		System.out.println(list.get(2)); //결과 : 사과
 		// System.out.println(list.get(5));// IndexOutOfBoundsException
 
-		System.out.println(list.get(list.size() - 1));
+		System.out.println(list.get(list.size() - 1)); // 결과 : 귤
 
 		// 4. 요소 수정
 		// - T set(int index, T newValue)
 		String temp = list.set(2, "파인애플");
-		System.out.println(temp);
-		System.out.println(list.get(2));
+		System.out.println(temp); //결과 : 사과 (해당 위치에 있던 값 반환)
+		System.out.println(list.get(2)); //결과 : 파인애플
 
 		// 5. 요소 삭제
 		// 방 없애기 > 길이 줄어든다. => 배열은 안됨. 방 개수가 고정
@@ -373,30 +373,30 @@ public class Ex54_ArrayList {
 		System.out.println(list.size()); // 5
 		list.remove(2);
 		System.out.println(list.size()); // 4
-		System.out.println(list.get(3));
+		System.out.println(list.get(3)); //귤
 
 		// 6. 요소 추가
 		// - 요소를 원하는 위치에 추가
 		// - Insert Mode
 		// - void add(int index, T value);
 		// - 시프트 발생 > 삽입된 방 이후의 모든 요소는 방번호 + 1
-		System.out.println(list.get(3));
+		System.out.println(list.get(3)); //결과 : 귤
 		list.add(2, "망고");
-		System.out.println(list.get(3));
-		System.out.println(list.size());
+		System.out.println(list.get(3)); //결과 : 포도
+		System.out.println(list.size()); //결과 :5
 		
 		//7. 요소 검색
 		//- int indexOf(T value)
 		//- int lastIndexOf(T value)
 		//- boolean contains(T value)
-		System.out.println(list.indexOf("사과"));
-		System.out.println(list.indexOf("파인애플"));
-		System.out.println(list.indexOf("포도"));
+		System.out.println(list.indexOf("사과")); //결과 : -1 (사과 없음)
+		System.out.println(list.indexOf("파인애플")); //결과 : -1 (파인애플 없음)
+		System.out.println(list.indexOf("포도")); //결과 : 3
 		
 		//요소 삭제시 이름으로도 날릴 수 있음
 		list.remove(3); //이 형식을 많이 씀
 		list.remove("포도"); //동일한 포도를 식별하지 못하고 맨 처음 포도만 지움
-		System.out.println(list.indexOf("포도"));
+		System.out.println(list.indexOf("포도")); //결과 : -1
 		
 		
 		//8. 요소 탐색
@@ -404,6 +404,12 @@ public class Ex54_ArrayList {
 			System.out.println(list.get(i));
 		}
 		System.out.println();
+		
+		//결과
+		//바나나
+		//딸기
+		//망고
+		//귤
 		
 		//for문
 		//- 향상된 for문(Enhanced for statement)
@@ -414,6 +420,11 @@ public class Ex54_ArrayList {
 			System.out.println(item);
 		}
 		System.out.println();
+		//결과
+		//바나나
+		//딸기
+		//망고
+		//귤
 		
 		//9. 초기화
 		//- 모든 요소 삭제 > 모든방.remove()
@@ -421,17 +432,17 @@ public class Ex54_ArrayList {
 		
 		list.clear();
 		
-		System.out.println(list.size());
+		System.out.println(list.size()); //결과 : 0
 		
 		//10. 빈배열 확인
 		//- boolean isEmpty()
-		System.out.println(list.isEmpty());
-		System.out.println(list.size()==0);
+		System.out.println(list.isEmpty()); //true
+		System.out.println(list.size()==0); //true
 		
 		list.add("사과");
 		
-		System.out.println(list.isEmpty());
-		System.out.println(list.size()==0);
+		System.out.println(list.isEmpty()); //false
+		System.out.println(list.size()==0); //false
 
 	}
 
@@ -484,10 +495,7 @@ public class Ex54_ArrayList {
 		for(int i=0; i<nums2.size();i++) {
 			System.out.println(nums2.get(i));
 		}
-		
-		
-		
-		
+
 	}
 
 }

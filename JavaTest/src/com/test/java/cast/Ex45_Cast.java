@@ -57,6 +57,10 @@ public class Ex45_Cast {
 		
 		p1.a=10;
 		p1.b=20;
+		
+		System.out.println(p1.a);
+		System.out.println(p1.b);
+		
 			
 		
 		Parent p2;
@@ -72,8 +76,8 @@ public class Ex45_Cast {
 		//다운 캐스팅 > 100% 불가능 
 		
 		
-//		c2= (Child)p2;
-//		
+		c2= (Child)p2;
+		
 //		c2.a = 10;
 //		c2.b = 20;
 //		c2.c = 30;

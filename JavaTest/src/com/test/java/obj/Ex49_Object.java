@@ -85,13 +85,15 @@ public class Ex49_Object {
 		Object[] list = new Object[5];
 		
 		list[0] = 100;
-		list[2] = 200;
-		list[3] = 300;
+		list[1] = 200;
+		list[2] = 300;
 		list[3]	= "문자열";
 		list[4] = true;
 		
+
+		
 		for(int i=0; i<list.length; i++) {
-			System.out.println((int)list[i] * 2);//예측 불가능 / 참조형일떄는 값형과 대입을 못하기 때문에 다시 다운캐스팅
+			System.out.println((int)list[i]);//예측 불가능 / 참조형일떄는 값형과 대입을 못하기 때문에 다시 다운캐스팅
 			
 		}
 	}
