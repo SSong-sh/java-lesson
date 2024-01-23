@@ -32,14 +32,14 @@ public class Ex53_Exception {
 		//m4();
 		
 		try {
-			//m5();
+			m5();
 			//m6();
 			
 		} catch (Exception e) {
-		
+			System.out.println("에러처리");
 		}
 	
-		m7();
+		//m7();
 		
 	
 		
@@ -185,13 +185,13 @@ public class Ex53_Exception {
 		int num = scan.nextInt();
 		
 		//예외 조건
-		if(num !=0) {
-			//비즈니스코드(업무코드)
-			System.out.printf("100 / %d = %d\n", num, 100/num);
-		} else {
-			//예외처리코드
-			System.out.println("0을 입력하지 마시오.");
-		}
+//		if(num !=0) {
+//			//비즈니스코드(업무코드)
+//			System.out.printf("100 / %d = %d\n", num, 100/num);
+//		} else {
+//			//예외처리코드
+//			System.out.println("0을 입력하지 마시오.");
+//		}
 		
 		
 		

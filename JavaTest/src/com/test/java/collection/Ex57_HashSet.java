@@ -31,9 +31,9 @@ public class Ex57_HashSet {
 		 */
 		
 		//m1();
-		//m2();
+		m2();
 		//m3();
-		m4();
+		//m4();
 		//m5();
 
 	}
@@ -161,7 +161,6 @@ public class Ex57_HashSet {
 			
 		}
 		
-		System.out.println(lotto); //중복값 발생
 		Collections.sort(lotto);
 		System.out.println(lotto); 
 		System.out.println();
@@ -190,7 +189,7 @@ public class Ex57_HashSet {
 		Collections.sort(lotto3);
 		System.out.println(lotto3);
 		
-		//결과 : [5, 6, 7, 25, 38, 41]
+		
 	}
 
 	private static boolean check(ArrayList<Integer> lotto, int n) {
