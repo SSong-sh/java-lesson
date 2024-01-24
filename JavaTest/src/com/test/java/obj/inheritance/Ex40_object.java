@@ -2,7 +2,7 @@ package com.test.java.obj.inheritance;
 
 import java.util.Scanner;
 
-import com.test.java.test;
+
 
 public class Ex40_object {
 	
