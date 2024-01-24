@@ -1,0 +1,41 @@
+콘솔 기반 인증 
+
+1. 사용 계층
+	- 미인증 유저(로그인 하기 전)
+	- 인증 유저(로그인 한 후)
+	- 관리자 (로그인 한 후)
+	
+2. 업무
+	- 모든 계층 접근 > 자유 게시판
+	- 인증 유저 > 회원 전용 게시판 
+	- 관리자 > 관리자 전용 게시판
+	
+패키지 + 파일
+- com.test.java //루트
+	- Main.java //프로젝트의 중심이자 main()를 가지고 있는 유일한 클래스
+
+- com.test.java.member.user // 유저
+	- User.java
+
+- com.test.java.member.admin //관리자
+	- Admin.java
+
+- com.test.java.board.freeboard //자유게시판
+	- FreeBoard.java
+
+- com.test.java.board.memberboard 
+	- MemberBoard.java
+
+- com.test.java.board.adminboard	
+	- AdminBoard.java
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
