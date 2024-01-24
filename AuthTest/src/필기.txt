@@ -13,10 +13,21 @@
 패키지 + 파일
 - com.test.java //루트
 	- Main.java //프로젝트의 중심이자 main()를 가지고 있는 유일한 클래스
+	
+- com.test.java.view //화면 출력 관련 패키지
+	- View.java
 
+- com.test.java.resource
+	- Path.java
+
+- com.test.java.member
+	- Login.java
+	- Logout.java
+	- Member.java
+	
 - com.test.java.member.user // 유저
 	- User.java
-
+	
 - com.test.java.member.admin //관리자
 	- Admin.java
 
@@ -30,6 +41,8 @@
 	- AdminBoard.java
 	
 	
+회원 정보 데이터
+- AuthTest > "member" > "member.txt"
 	
 	
 	
