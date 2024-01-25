@@ -29,7 +29,12 @@ public class NoteClass {
 		
 		--------------------------------------------------------------------
 		
-		호출..
+			 
+	 */
+	
+	public static void main(String[] args) {
+		
+
 		Note note = new Note();
 		
 		note.setSize("B4");
@@ -47,19 +52,14 @@ public class NoteClass {
 		note2.setPage(100);
 		
 		System.out.println(note2.info());
-			 
-	 */
-	
-	public static void main(String[] args) {
-		
 	}
 
 }
 
 class Note  {
-	   private String size;
-	   private String color;
-	   private int page;
+	   private String size ="A5";
+	   private String color = "흰색";
+	   private int page = 10;
 	   private String owner;
 	   private int price;
 
@@ -72,7 +72,7 @@ class Note  {
 					|| size.equals("A5")
 					|| size.equals("B3")
 					|| size.equals("B4")
-					|| size.equals("B4")){
+					|| size.equals("B5")){
 				this.size = size;
 			} else {
 				System.out.println("잘못된 사이즈 입력입니다.");
@@ -96,11 +96,12 @@ class Note  {
 
 		public void setPage(int page) {
 			
-			if(page <= 10 || page >= 200) {
-				return;
+			if(page >= 10 && page <= 200) {
+				this.page = page;
+			}else {
+				System.out.println("잘못된 페이지수를 입력했습니다.");
 			}
 			
-			this.page = page;
 		}
 
 		public void setOwner(String owner) {
@@ -112,39 +113,80 @@ class Note  {
 		}
 
 	   private boolean checkLength(String owner) {
-			if(owner.length() > 2 && owner.length() <5) {
+			if(owner.length() >= 2 && owner.length() <=5) {
 				return true;
+			} else {
+				return false;
 			}
-			return false;
+			
 		}
 
 	private boolean checkOwner(String owner) {
 		   
 		   for(int i=0; i<owner.length(); i++) {
 			   char c = owner.charAt(i);
-			   if(c <= '가' && c >= '힣') {
-				   return true;
+			   if(c < '가' && c > '힣') {
+				   return false;
 			   }
 		   }
-			return false;
+			return true;
 		}
 
 	public String info() {
 		
 			this.price = 500;
 			
+			if(this.size.equals("A3")) {
+				this.price +=400;
+			}else if(this.size.equals("A4")) {
+				this.price += 200;
+			}else if(this.size.equals("B3")) {
+				this.price += 500;
+			}else if(this.size.equals("B4")) {
+				this.price += 300;
+			}else if(this.size.equals("B5")) {
+				this.price += 100;
+			}
+			
+			if(this.color.equals("검정색")) {
+				this.price +=100;
+			}else if(this.color.equals("노란색")) {
+				this.price += 200;
+			}else if(this.color.equals("파란색")) {
+				this.price += 200;
+			}
+			
+			this.price += (this.page -10) * 10;
+			
+			String tempPage = "";
+			
+			if(this.page >= 10 && this.page <= 50) {
+				tempPage = "얇은";
+			} else if (this.page >= 51 && this.page <= 100) {
+				tempPage = "보통";
+			} else if (this.page >= 101 && this.page <= 200) {
+				tempPage = "두꺼운";
+			}
 			
 			
-		
-	         return String.format("■■■■■■ 노트정보 ■■■■■■\n"
-	        		 				+ "소유자 : %s\n"
-	        		 				+ "특성: %s %s %s노트"
-	        		 				+ "가격: %,d원\n"
-	        		 				, this.owner
-	        		 				, this.color
-	        		 				, this.page
-	        		 				, this.size
-	        		 				, this.price);
+			String temp ="";
+			
+			temp += "■■■■■■ 노트정보 ■■■■■■\n";
+			
+			if(this.owner != null) {
+				temp += String.format("소유자 : %s\n", this.owner);
+				temp += String.format("특성: %s %s %s노트\n", this.color, tempPage , this.size);
+				temp += String.format("가격: %,d원\n", this.price);
+				
+			} else {
+				
+				temp += "주인 없는 노트\n";
+			}
+			
+			temp +="■■■■■■■■■■■■■■■■■■■■■■■■■■■\n";
+			
+			return temp;
+
 	   }
 
 
