@@ -1,0 +1,35 @@
+//콘솔 그림 그리기 => 아스키아트 프로그램, figlet java => 깃헙 사이트(글자를 이미지화 시켜줌)=>제목이나 타이틀
+
+[성적 관리 프로그램]
+
+상황
+- 중학생 > 이름
+- 학생 수: 10여명
+- 과목: 국어, 영어, 수학
+- 총점, 평균 계산
+
+기능(업무) > CRUD (Creat, Read, Update, Delete)
+- 성적 추가
+- 성적 읽기
+- 성적 삭제
+
+데이터 파일(구조)
+- Filetest > dat > score.txt 
+
+학생명,국어,영어,수학
+홍길동,100,90,80
+아무개,90,99,98
+
+
+
+
+패키지
+- com.test.java > 메인
+	- Main.java > 메인 클래스
+	
+- com.test.java.repository > 데이터 처리 계층
+	- Data.java
+	- 성적 1명 > 텍스트 파일 1줄 > 자바 자료형 > Score.java
+	
+- com.test.java.service > 서비스 계층
+	- Service.java > 업무 담당
