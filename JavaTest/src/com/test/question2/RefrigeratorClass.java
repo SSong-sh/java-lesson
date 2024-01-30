@@ -1,5 +1,7 @@
 package com.test.question2;
 
+import java.util.ArrayList;
+
 import com.test.question.Q_Refrigerator;
 import com.test.question.Q_item;
 
@@ -22,6 +24,27 @@ public class RefrigeratorClass {
 	public static void main(String[] args) {
 		 
 		
+		//m1();//클래스로 풀어봄
+		m2(); //ArrayList
+	}
+
+	private static void m2() {
+		
+		ArrayList<item2> list = new ArrayList<item2>();
+		
+		list.add(new item2("김치","2024-01-30"));
+		list.add(new item2("사과","2024-01-30"));
+		list.add(new item2("포도","2024-01-30"));
+		
+		System.out.printf("냉장고 안의 총 아이템 개수 : %d개\n", list.size());
+		
+		for(item2 item2 : list) {
+			System.out.println(item2);
+		}
+		
+	}
+
+	private static void m1() {
 		Refrigerator r = new Refrigerator();
 
 		item item1 = new item();
@@ -116,6 +139,7 @@ class item{
 	private String name;
 	private String expiration;
 	
+
 	public String getName() {
 		return name;
 	}
@@ -128,5 +152,24 @@ class item{
 	public void setExpiration(String expiration) {
 		this.expiration = expiration;
 	}
+	
+}
+
+class item2 {
+	
+	private String name;
+	private String expiration;
+	
+	public item2(String name, String expiration) {
+		this.name = name;
+		this.expiration = expiration;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("%s(%s)", name, expiration);
+	}
+	
+	
 	
 }
